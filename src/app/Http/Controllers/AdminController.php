@@ -27,4 +27,9 @@ class AdminController extends Controller
         Contact::find($request->id)->delete();
         return redirect('/admin');
     }
+
+    public function reset()
+    {
+        return redirect('/admin');
+    }
 }

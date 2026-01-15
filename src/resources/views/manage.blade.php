@@ -23,7 +23,7 @@
     <h2 class="main__title">Admin</h2>
 
     {{-- 検索フォーム --}}
-    <form class="search-form" method="get" action="">
+    <form class="search-form" method="get" action="/search">
         <div class="search-form__row">
             {{-- 名前・メール --}}
             <input
@@ -65,7 +65,7 @@
                 検索
             </button>
 
-            <a href="/admin"
+            <a href="/reset"
                class="search-form__button search-form__button--reset">
                 リセット
             </a>

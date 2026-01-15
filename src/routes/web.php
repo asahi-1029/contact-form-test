@@ -26,4 +26,6 @@ Route::post('/thanks',[ContactController::class,'store']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::delete('/delete',[AdminController::class,'delete']);
+    Route::get('/reset', [AdminController::class, 'reset']);
+    Route::get('/search', [AdminController::class, 'index']);
     });
