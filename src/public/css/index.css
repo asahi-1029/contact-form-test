@@ -1,0 +1,228 @@
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: #8B7969;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ヘッダー */
+
+.header {
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+    text-align: center;
+}
+
+.header__title {
+    color: #8B7969;
+    font-size: 40px;
+}
+
+/* contact heading */
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 25px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form__title {
+    color: #8B7969;
+    font-size: 35px;
+}
+
+/* フォーム全体の設定 */
+
+.form {
+    margin: 0 auto;
+    /* 横中央に置く */
+    max-width: 972px;
+    height: 606px;
+    text-align: center;
+    /* フォーム内のテキストを中央寄せ */
+}
+
+/* フォームのグループ（1つの入力欄とラベル）*/
+
+.form__group {
+    display: flex;
+    /* ラベルと入力欄を横並びにする */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form__group-title {
+    width: 30%;
+    /* ラベル部分の幅は30% */
+    padding-top: 10px;
+    text-align: left;
+}
+
+.form__group--content {
+    width: 70%;
+    text-align: left;
+}
+
+/* ラベルと必須マーク*/
+
+.form__label--item {
+    color: #8B7969;
+    font-size: 20px;
+}
+
+.form__label--required {
+    margin-left: 5px;
+    color: red;
+}
+
+/* error */
+
+.form__error {
+    min-height: 20px;
+    /* エラーがないときもスペースを確保 */
+    color: #ff0000;
+    text-align: left;
+    white-space: normal;
+    /* エラーメッセージが長くても自動で折り返して表示される */
+}
+
+/* 入力欄（text / textarea / select）*/
+
+.form__input--text input,
+.form__input--textarea textarea,
+.form__input--text select {
+    padding: 10px;
+    /* 文字が枠につかない */
+    border: 1px solid #ddd;
+    appearance: none;
+    /* selectのデフォルト装飾を消す */
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.form__input--text,
+.form__input--textarea {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form__input--text input,
+.form__input--text select {
+    height: 40px;
+    width: 100%;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+    resize: none;
+    width: 100%;
+}
+
+.form__input--text input::placeholder,
+.form__input--textarea textarea::placeholder {
+    color: #8B7969
+}
+
+/* 名前の横並び */
+
+.name-input {
+    display: flex;
+    gap: 20px;
+}
+
+.name-input__field {
+    display: flex;
+    flex-direction: column;
+    /* 縦に並べる */
+    width: 100%;
+}
+
+/* 電話番号の横並び */
+
+.tel__input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.tel__input input {
+    padding: 10px;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    color: #8B7969;
+    width: 100%;
+}
+
+.hyphen {
+    color: #8B7969;
+}
+
+/* ラジオボタン */
+.form__input--radio {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    width: 600px;
+    color: #8b7969;
+    font-size: 20px;
+}
+
+.form__input--radio input {
+    accent-color: #8b7969;
+    /* 丸の色 */
+}
+
+/* セレクトの矢印 */
+
+.select-wrapper {
+    position: relative;
+}
+
+.form__input--text select {
+    color: #8B7969;
+}
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B7969;
+    font-size: 12px;
+    pointer-events: none;
+    /* クリック邪魔しない */
+}
+
+/* 送信ボタン */
+
+.form__button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.form__button-submit {
+    width: 160px;
+    height: 40px;
+    border: none;
+    background-color: #82756A;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}

@@ -1,0 +1,122 @@
+body {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+    margin: 0;
+    color: #8b7969;
+    background-color: #fcfcfc;
+}
+
+/* =========================================
+   ヘッダー
+   ========================================= */
+.header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: center;
+    /* タイトルを中央 */
+    align-items: center;
+    position: relative;
+    /* ボタン絶対配置の基準 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__title {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    color: #8b7969;
+}
+
+.header-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fcf9f7;
+    border: 1px solid #dccfc6;
+    color: #bfaea1;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background-color: #f0e8e2;
+}
+
+/* メインコンテンツ */
+.main {
+    padding-top: 15px;
+}
+
+.main__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+/* 登録フォームのカード部分 */
+.register {
+    background-color: #ffffff;
+    max-width: 736px;
+    height: 644px;
+    margin: 0 auto 100px;
+    padding: 60px 80px;
+    border-radius: 5px;
+}
+
+.register__form {
+    width: 445px;
+    height: 396px;
+    margin: 0 auto;
+}
+
+/* フォーム要素 */
+.form__group {
+    margin-bottom: 40px;
+}
+
+.form__label {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.form__group input {
+    width: 100%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* error */
+
+.form__error {
+    color: #ff0000;
+    text-align: left;
+    white-space: normal;
+    /* エラーメッセージが長くても自動で折り返して表示される */
+}
+
+/* 登録ボタン */
+.form__button {
+    text-align: center;
+}
+
+.form__button-submit {
+    background-color: #82756A;
+    color: #ffffff;
+    border: none;
+    padding: 10px 40px;
+    font-size: 18px;
+    cursor: pointer;
+}

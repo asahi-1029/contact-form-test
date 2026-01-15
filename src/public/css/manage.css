@@ -1,0 +1,453 @@
+/* =========================================
+   基本設定
+   ========================================= */
+body {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+    margin: 0;
+    color: #8b7969;
+    background-color: #fcfcfc;
+}
+
+/* =========================================
+   ヘッダー
+   ========================================= */
+.header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: center; /* タイトルを中央 */
+    align-items: center;
+    position: relative; /* ボタン絶対配置の基準 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__title {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    color: #8b7969;
+}
+
+.header-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fcf9f7;
+    border: 1px solid #dccfc6;
+    color: #bfaea1;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background-color: #f0e8e2;
+}
+
+/* メインコンテンツ */
+.main {
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: #8b7969;
+}
+
+/* =========================================
+   検索フォーム
+   ========================================= */
+.search-form {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.search-form__row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* 各要素の間隔 */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 入力欄・セレクトボックス共通 */
+.search-form__input,
+.search-form__select,
+.search-form__date {
+    padding: 10px 15px;
+    border: 1px solid #e8e3df;
+    background-color: #f8f6f5;
+    color: #8b7969;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.search-form__input {
+    width: 280px;
+}
+
+.search-form__select {
+    width: 150px;
+    cursor: pointer;
+}
+
+.search-form__date {
+    width: 160px;
+    cursor: pointer;
+}
+
+/* 性別のセレクトボックスが入っている要素 */
+.search-form__item--gender {
+    flex: 0 0 100px;
+    /* 幅を100pxに固定（数値はお好みで） */
+}
+
+/* お問い合わせの種類が入っている要素 */
+.search-form__item--type {
+    flex: 1;
+    /* 残りのスペースを優先的に使うように広げる */
+    min-width: 200px;
+    /* 最低限必要な幅を確保 */
+}
+
+/* プレースホルダーの色調整（各ブラウザ対応） */
+::placeholder {
+    color: #c4b9b0;
+}
+
+/* 検索ボタン */
+.search-form__button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.search-form__button--search {
+    background-color: #827262;
+    /* 濃い茶色 */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-form__button--search:hover {
+    background-color: #6a5d50;
+}
+
+/* リセットボタン */
+.search-form__button--reset {
+    background-color: #dccfc6;
+    /* 薄いベージュ */
+    color: #fff;
+}
+
+.search-form__button--reset:hover {
+    background-color: #cbbbae;
+}
+
+/* エクスポートボタンエリア */
+.search-form__export {
+    display: flex;
+    justify-content: space-between;
+    /* ページネーションがある場合に左右配置できるよう準備 */
+    margin-bottom: 15px;
+}
+
+.search-form__export button {
+    background-color: #e6dfd9;
+    /* 薄いベージュ */
+    border: none;
+    color: #8b7969;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.search-form__export button:hover {
+    background-color: #d9d0c9;
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    /* これで左右両端に配置されます */
+    align-items: flex-end;
+    /* 下揃えにする（ページネーションの高さに合わせる） */
+    margin-bottom: 10px;
+    /* テーブルとの間の余白 */
+}
+
+/* =========================================
+   テーブル
+   ========================================= */
+.admin-table {
+    width: 100%;
+    /* 横幅いっぱいにする */
+    border-collapse: collapse;
+    /* 枠線を二重にせず1本にする */
+    margin: 20px auto;
+    /* 上下の余白と中央寄せ */
+    font-size: 16px;
+    /* 文字サイズ（適宜調整してください） */
+    background-color: #fff;
+    /* テーブル全体の背景は白 */
+}
+
+.admin-table__inner {
+    width: 100%;
+    table-layout: fixed;
+    /* 列幅を均等あるいは指定通りに */
+}
+
+.admin-table__row--header {
+    background-color: #8b7969;
+    color: #fff;
+}
+
+.admin-table__inner th,
+.admin-table__inner td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e8e3df;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* --- ヘッダー行 (th) のデザイン --- */
+/* クラス名 .admin-table__row--header の中の th に適用 */
+.admin-table__row--header th {
+    background-color: #8B7969;
+    /* ご指定の茶色 */
+    color: #ffffff;
+    /* 文字色を白に */
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    /* 薄いグレーの枠線 */
+    padding: 16px 8px;
+    /* 上下左右に余白を持たせる */
+    font-weight: bold;
+    /* 太字 */
+    text-align: center;
+    /* 文字を中央揃え */
+    white-space: nowrap;
+    /* ヘッダーの文字が折り返されないようにする */
+    border-left: none;
+    border-right: none;
+}
+
+/* --- データ行 (td) のデザイン --- */
+/* 通常の行のセル設定 */
+.admin-table__row td {
+    border-bottom: 1px solid #ddd;
+    /* 薄いグレーの枠線（ヘッダーと合わせる） */
+    padding: 16px 8px;
+    /* 上下左右に余白 */
+    color: #555;
+    /* 文字色は真っ黒すぎないグレーが見やすい */
+    text-align: center;
+    /* 中央揃え（お好みで left に変更可） */
+    vertical-align: middle;
+    /* 上下の真ん中に配置 */
+}
+
+
+.admin-table__row:hover {
+    background-color: #faf9f8;
+}
+
+/* 詳細ボタン */
+.admin-table__detail-button {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #dccfc6;
+    color: #dccfc6;
+    /* 文字色を枠線と同じに */
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.admin-table__detail-button:hover {
+    background-color: #dccfc6;
+    color: #fff;
+}
+
+/* =========================================
+   ページネーション
+   ========================================= */
+/* ページネーション全体のコンテナ */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    /* 中央寄せ（左右に飛ばすならspace-between） */
+}
+
+/* 「Showing 1 to 7...」というテキストを完全に消す */
+.pagination nav p {
+    display: none;
+}
+
+/* リンクを囲んでいるdivの不要な隙間やスマホ用ボタンを隠す */
+.pagination nav>div:first-child {
+    display: none;
+}
+
+/* 数字と矢印を横並びにする */
+.pagination nav>div:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+/* 数字ボックスを囲む枠線の塊 */
+.pagination .relative.z-0 {
+    display: flex;
+    border: 1px solid #E0E0E0;
+    /* 薄いグレーの枠線 */
+    border-radius: 4px;
+    /* 少し角を丸める */
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* 数字・矢印共通のスタイル */
+.pagination .relative.z-0 a,
+.pagination .relative.z-0 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /* 正方形に近い形にする */
+    height: 40px;
+    border: none;
+    border-right: 1px solid #E0E0E0;
+    /* 縦の区切り線 */
+    color: #8B7969;
+    /* 文字色を茶色に */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 最後の要素の右線を消す */
+.pagination .relative.z-0 a:last-child,
+.pagination .relative.z-0 span:last-child {
+    border-right: none;
+}
+
+/* 現在のページ（1枚目の茶色背景） */
+.pagination span[aria-current="page"] span {
+    background-color: #8B7969 !important;
+    color: #ffffff !important;
+    width: 100%;
+    height: 100%;
+}
+
+/* ホバー時に少し色を変える */
+.pagination a:hover {
+    background-color: #f5f5f5;
+}
+
+/* モーダル背景 */
+.modal {
+    display: none;
+    /* 初期は非表示 */
+    position: fixed;
+    /* スクロールしても画面固定 */
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* モーダルコンテンツ */
+.modal__content {
+    background-color: #fff;
+    padding: 50px;
+    width: 805px;
+    max-width: 90%;
+    position: relative;
+    /* ×ボタンの基準点 */
+    border-radius: 2px;
+}
+
+/* 閉じるボタン (x) */
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: #8B7969;
+}
+
+/* モーダル内のテーブル */
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modal-table th {
+    text-align: left;
+    width: 40%;
+    padding: 15px 0;
+    font-weight: bold;
+    color: #8B7969;
+}
+
+.modal-table td {
+    text-align: left;
+    padding: 15px 0;
+    color: #8B7969;
+}
+
+.modal-table th,
+.modal-table td {
+    border-bottom: none;
+}
+
+/* 削除ボタン */
+.modal__delete-btn {
+    display: block;
+    margin: 40px auto 0;
+    background-color: #BA370D;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

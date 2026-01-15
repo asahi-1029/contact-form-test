@@ -1,0 +1,136 @@
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: #8B7969;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ヘッダー */
+
+.header {
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+    text-align: center;
+}
+
+.header__title {
+    color: #8B7969;
+    font-size: 40px;
+}
+
+/* contact heading */
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 25px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form__title {
+    color: #8B7969;
+    font-size: 35px;
+}
+
+/* フォーム全体の設定 */
+
+.form {
+    margin: 0 auto;
+    /* 横中央に置く */
+    max-width: 972px;
+    height: 606px;
+    text-align: center;
+    /* フォーム内のテキストを中央寄せ */
+}
+
+.confirm-table {
+    border: 1px solid #ddd;
+}
+
+.confirm-table__inner {
+    width: 100%;
+}
+
+.confirm-table__header {
+    padding: 15px;
+    width: 20%;
+    border-bottom: 1px solid #ddd;
+    background-color: #8B7969;
+    color: #fff;
+}
+
+.confirm-table__text {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirm-table__text input {
+    width: 100%;
+    outline: none;
+    /* フォーカス時に出る 青い枠線を消す */
+    border: none;
+    /* input の 枠線を完全に消す */
+    color: #8B7969;
+    font-size: 20px;
+}
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__text {
+    border-bottom-width: 0;
+    /* テーブルの最後の行の枠線を消す */
+}
+
+.confirm-table__text textarea {
+    width: 100%;
+    /* 親のtdに合わせる */
+    height: 100px;
+    /* 高さを十分に確保 */
+    resize: none;
+    /* ユーザーによるサイズ変更不可 */
+    border: none;
+    /* 枠線なし */
+    outline: none;
+    /* フォーカス時の青枠なし */
+    font-size: 20px;
+    color: #8B7969;
+    background-color: transparent;
+    /* tdの背景に合わせる */
+}
+
+.form__button {
+    display: flex;
+    align-items: center;
+    /* 子要素を縦方向の中央に揃える */
+    justify-content: center;
+    /* 子要素を親の横幅の中央に揃える */
+    gap: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: #82756A;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form__update {
+    color: #8B7969;
+    text-decoration: underline;
+    font-size: 20px;
+}
