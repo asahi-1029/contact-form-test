@@ -7,7 +7,7 @@
 - git clone git@github.com:asahi-1029/contact-form-test.git
 - docker-compose up -d --build
 
-##Laravel環境構築
+## Laravel環境構築
 - docker-compose exec php bash
 - composer install
 - cp .env.example .env
@@ -15,7 +15,7 @@
 - php artisan migrate
 - php artisan db:seed
 
-##開発環境
+## 開発環境
 - お問い合わせフォーム入力画面 : http://localhost/
 - お問い合わせ確認画面 : http://localhost/confirm
 - サンクス画面 : http://localhost/thanks
@@ -35,5 +35,6 @@
 - nginx 1.21.1
 
 ## ER図
-![ER図](index.drwio.png)
+<img width="904" height="1214" alt="image" src="https://github.com/user-attachments/assets/d53292fc-0954-4d9d-9bc7-9b499bfa9719" />
+
 
