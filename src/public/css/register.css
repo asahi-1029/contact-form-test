@@ -5,7 +5,7 @@ body {
     font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
     margin: 0;
     color: #8b7969;
-    background-color: #fcfcfc;
+    background-color: #F1ECE7;
 }
 
 /* =========================================
@@ -36,7 +36,7 @@ body {
     color: #8b7969;
 }
 
-.header-button {
+.header__button {
     position: absolute;
     right: 0;
     top: 50%;

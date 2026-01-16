@@ -34,7 +34,7 @@ body {
     color: #8b7969;
 }
 
-.header-button {
+.header__button {
     position: absolute;
     right: 0;
     top: 50%;
